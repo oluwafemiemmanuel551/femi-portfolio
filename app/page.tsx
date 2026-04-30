@@ -55,7 +55,7 @@ export default function Home() {
         {/* HERO */}
         <section id="about" className="text-center space-y-6">
           <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 1, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             src="/profile.jpg"
@@ -63,20 +63,20 @@ export default function Home() {
             className="w-36 h-36 mx-auto rounded-full object-cover ring-4 ring-green-500/30"
           />
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          <motion.div initial={{ opacity: 1, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
             <p className="text-green-400 text-sm uppercase tracking-widest mb-2">👋 Hello, I'm</p>
             <h1 className="text-4xl md:text-6xl font-bold">Amodu Oluwafemi Emmanuel</h1>
           </motion.div>
 
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-lg text-gray-400">
+          <motion.p initial={{ opacity: 1 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-lg text-gray-400">
             Data Analyst • Business Intelligence • Machine Learning
           </motion.p>
 
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="max-w-xl mx-auto text-gray-500">
+          <motion.p initial={{ opacity: 1 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="max-w-xl mx-auto text-gray-500">
             I transform complex data into clear insights and actionable dashboards that drive real business decisions.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row justify-center gap-3">
+          <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row justify-center gap-3">
             <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-green-500 text-black px-6 py-3 text-sm font-semibold hover:bg-green-400 transition">
               View My Projects
             </a>
@@ -85,7 +85,7 @@ export default function Home() {
             </a>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="flex justify-center gap-4 text-sm text-gray-400">
+          <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="flex justify-center gap-4 text-sm text-gray-400">
             <a href="mailto:oluwafemiemmanuel51@gmail.com" className="hover:text-white transition">Email</a>
             <span>•</span>
             <a href="tel:+2347072317836" className="hover:text-white transition">+234 707 231 7836</a>
@@ -97,7 +97,7 @@ export default function Home() {
         {/* EXPERIENCE */}
         <motion.section
           id="experience"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -119,7 +119,7 @@ export default function Home() {
         {/* PROJECTS */}
         <motion.section
           id="projects"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -165,7 +165,7 @@ export default function Home() {
         {/* SKILLS */}
         <motion.section
           id="skills"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -177,7 +177,7 @@ export default function Home() {
             {skills.map((skill, i) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 1, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -203,7 +203,7 @@ export default function Home() {
         {/* EDUCATION */}
         <motion.section
           id="education"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -223,7 +223,7 @@ export default function Home() {
 
         {/* TESTIMONIALS */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -234,7 +234,7 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
@@ -253,7 +253,7 @@ export default function Home() {
         {/* CONTACT */}
         <motion.section
           id="contact"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
