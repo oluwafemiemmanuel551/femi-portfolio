@@ -40,6 +40,8 @@ export default function Home() {
           </a>
           <a
             href="/oluwafemi-cv.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
             download
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm text-white transition hover:border-white hover:bg-white/10"
           >
@@ -80,7 +82,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-4">Featured Project</h2>
 
         <div className="bg-gray-900 p-6 rounded-xl space-y-6">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <div>
               <h3 className="text-xl font-bold">
                 SkyConnect Airline Performance Analysis
@@ -91,28 +93,47 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div className="flex items-center justify-between gap-3">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-gray-400">Preview</p>
-                  <p className="mt-2 text-gray-300">
-                    Slide-by-slide insight summary, charts, and recommendations.
+                  <p className="text-sm uppercase tracking-[0.24em] text-gray-400">Project Preview</p>
+                  <p className="mt-2 text-gray-300 max-w-2xl">
+                    View a quick slide summary of the PPTX with key findings and recommendations.
                   </p>
                 </div>
-                <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold uppercase text-green-300">
-                  PPTX
-                </span>
+                <a
+                  href="/portfolio-project.pptx"
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 text-sm font-semibold transition hover:bg-gray-200"
+                >
+                  Download slide deck
+                </a>
               </div>
 
-              <div className="mt-4 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-950 to-slate-900 p-4">
-                <div className="space-y-3">
-                  <div className="h-3 w-24 rounded-full bg-white/10" />
-                  <div className="h-2.5 w-full max-w-sm rounded-full bg-white/10" />
-                  <div className="grid grid-cols-3 gap-3 pt-3">
-                    <span className="h-14 rounded-2xl bg-white/5" />
-                    <span className="h-14 rounded-2xl bg-white/5" />
-                    <span className="h-14 rounded-2xl bg-white/5" />
-                  </div>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl bg-slate-950 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-gray-500">Slide 1</p>
+                  <p className="mt-3 text-sm text-gray-300">
+                    Overview of airline performance, revenue trends, and priority KPIs.
+                  </p>
+                </div>
+                <div className="rounded-3xl bg-slate-950 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-gray-500">Slide 2</p>
+                  <p className="mt-3 text-sm text-gray-300">
+                    Delay analysis with operational recommendations to reduce turnaround time.
+                  </p>
+                </div>
+                <div className="rounded-3xl bg-slate-950 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-gray-500">Slide 3</p>
+                  <p className="mt-3 text-sm text-gray-300">
+                    Revenue forecast models and customer segmentation insights.
+                  </p>
+                </div>
+                <div className="rounded-3xl bg-slate-950 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-gray-500">Slide 4</p>
+                  <p className="mt-3 text-sm text-gray-300">
+                    Recommended action plan, next steps, and business impact.
+                  </p>
                 </div>
               </div>
             </div>
@@ -167,12 +188,64 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section className="text-center space-y-3 pb-20">
-        <h2 className="text-2xl font-semibold">Contact</h2>
+      <section className="pb-20">
+        <div className="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-gray-900 p-8 shadow-sm shadow-black/20">
+          <div className="mb-8 text-center">
+            <p className="text-xs uppercase tracking-[0.24em] text-green-300">Contact Me</p>
+            <h2 className="mt-3 text-2xl font-semibold">Let’s work together</h2>
+            <p className="mt-2 text-gray-400">
+              Share your name, email, and why you’d like to work together.
+            </p>
+          </div>
 
-        <p className="text-gray-400">oluwafemiemmanuel551@gmail.com</p>
-        <p className="text-gray-400">+2347072317836</p>
-        <p className="text-gray-400">Lagos, Nigeria</p>
+          <form className="space-y-5" onSubmit={(event) => event.preventDefault()}>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <label className="space-y-2 text-sm text-gray-300">
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-white"
+                  required
+                />
+              </label>
+
+              <label className="space-y-2 text-sm text-gray-300">
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-white"
+                  required
+                />
+              </label>
+            </div>
+
+            <label className="space-y-2 text-sm text-gray-300">
+              <span>Why would you like to work with me?</span>
+              <textarea
+                name="message"
+                rows={5}
+                placeholder="Tell me about your project or collaboration goals"
+                className="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-white"
+                required
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="inline-flex w-full justify-center rounded-full bg-green-500 px-6 py-3 text-sm font-semibold text-black transition hover:bg-green-400"
+            >
+              Send message
+            </button>
+          </form>
+
+          <p className="mt-6 text-center text-sm text-gray-400">
+            I’ll receive your message and respond as soon as possible.
+          </p>
+        </div>
       </section>
 
     </main>
