@@ -8,6 +8,12 @@ export default function Home() {
 
       {/* HERO */}
       <section className="text-center space-y-6 pt-20">
+        <img
+          src="/profile.jpg"
+          alt="Profile picture of Amodu Oluwafemi Emmanuel"
+          className="w-36 h-36 mx-auto rounded-full object-cover ring-4 ring-white/20"
+        />
+
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,6 +29,23 @@ export default function Home() {
         <p className="max-w-xl mx-auto text-gray-500">
           Turning raw data into insights that drive real business decisions.
         </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mt-4">
+          <a
+            href="/portfolio-project.pptx"
+            download
+            className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 text-sm font-semibold transition hover:bg-gray-200"
+          >
+            Download project file
+          </a>
+          <a
+            href="/oluwafemi-cv.pdf"
+            download
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm text-white transition hover:border-white hover:bg-white/10"
+          >
+            Download CV
+          </a>
+        </div>
       </section>
 
       {/* ABOUT */}
@@ -56,15 +79,44 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">Featured Project</h2>
 
-        <div className="bg-gray-900 p-6 rounded-xl space-y-4">
-          <h3 className="text-xl font-bold">
-            SkyConnect Airline Performance Analysis
-          </h3>
+        <div className="bg-gray-900 p-6 rounded-xl space-y-6">
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-bold">
+                SkyConnect Airline Performance Analysis
+              </h3>
+              <p className="text-gray-400">
+                A data analytics project analyzing airline performance, delays,
+                and revenue trends (2022–2024).
+              </p>
+            </div>
 
-          <p className="text-gray-400">
-            A data analytics project analyzing airline performance, delays,
-            and revenue trends (2022–2024).
-          </p>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.24em] text-gray-400">Preview</p>
+                  <p className="mt-2 text-gray-300">
+                    Slide-by-slide insight summary, charts, and recommendations.
+                  </p>
+                </div>
+                <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold uppercase text-green-300">
+                  PPTX
+                </span>
+              </div>
+
+              <div className="mt-4 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-950 to-slate-900 p-4">
+                <div className="space-y-3">
+                  <div className="h-3 w-24 rounded-full bg-white/10" />
+                  <div className="h-2.5 w-full max-w-sm rounded-full bg-white/10" />
+                  <div className="grid grid-cols-3 gap-3 pt-3">
+                    <span className="h-14 rounded-2xl bg-white/5" />
+                    <span className="h-14 rounded-2xl bg-white/5" />
+                    <span className="h-14 rounded-2xl bg-white/5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <p className="text-gray-500 text-sm">
             Tools: MySQL • Power BI • Excel • Python
